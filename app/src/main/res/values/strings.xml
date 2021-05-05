@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">Youniform</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_product_available">No Product Available</string>
+    <string name="menu">Menu</string>
+    <string name="no_searched_places_avaialble">No Searched Places Avaialble</string>
+    <string name="account">My Account</string>
+    <string name="welcome">Welcome,</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in_to_continue">Sign in to Continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="or">-OR-</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="sign_in_with_facebook">Sign In with Facebook</string>
+    <string name="price">PRICE</string>
+    <string name="checkout">CHECKOUT</string>
+    <string name="details">Details</string>
+    <string name="enter_your_valid_email">Enter Your Valid Email</string>
+    <string name="you_have_a_problem">You have a problem?</string>
+    <string name="search_by_product_name">Search by Product Name</string>
+    <string name="verify_code">Verify Code</string>
+    <string name="a_6_digit_pin_has_been_sent_to_your_email_address_enter_it_below_to_continue">A 4 - Digit PIN has been sent to your email address, enter it below to continue</string>
+    <string name="write_your_review">Write your review</string>
+    <string name="tell_us_your_experience">Tell us your experience</string>
+    <string name="send">SEND</string>
+    <string name="write_review">Write Review</string>
+    <string name="user_name">User Name</string>
+    <string name="size">Size</string>
+    <string name="colour">Colour</string>
+    <string name="reviews">Reviews</string>
+    <string name="info">-INFO</string>
+    <string name="infoAdd">+INFO</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="composition_and_care">Composition and care</string>
+    <string name="in_store_availabilty">In-store availabilty</string>
+    <string name="buying_guide">Buying guide</string>
+    <string name="size_guide">Size guide</string>
+    <string name="wishlist">WishList</string>
+    <string name="number">Number</string>
+    <string name="delete_filters">Filters</string>
+    <string name="filter_by">Filter by</string>
+    <string name="apply">Apply</string>
+    <string name="order_history">Order History</string>
+    <string name="no_orders">No Orders</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="api_key">AIzaSyD_pPOU0msOC8ToW0qKwEMOsvc091yGEc4</string>
+
+
+    <string name="MyMap">AIzaSyD_pPOU0msOC8ToW0qKwEMOsvc091yGEc4</string>
+
+    <array name="places">
+        <item>Home</item>
+        <item>Work</item>
+
+    </array>
+
+    <array name="country_name">
+        <item>Pakistan</item>
+    </array>
+
+
+    <array name="provinces">
+        <item>Sindh</item>
+        <item>Punjab</item>
+        <item>Balochistan</item>
+        <item>KPK</item>
+    </array>
+
+    <array name="Sindh">
+        <item>Karachi</item>
+        <item>Sukkur</item>
+        <item>Larkana</item>
+        <item>Nawabshah</item>
+        <item>Mirpur Khas</item>
+        <item>Dadu</item>
+        <item>Jacobabad</item>
+        <item>Tando Allahyar</item>
+        <item>Kandhkot</item>
+        <item>Jamshoro</item>
+        <item>Umarkot</item>
+        <item>Mithi</item>
+    </array>
+
+
+    <array name="Punjab">
+
+        <item>Lahore</item>
+        <item>Sialkot City</item>
+        <item>Faisalabad</item>
+        <item>Rawalpindi</item>
+        <item>Multan</item>
+        <item>Gujranwala</item>
+        <item>Bahawalpur</item>
+        <item>Sargodha</item>
+        <item>Chiniot</item>
+        <item>Shekhupura</item>
+        <item>Jhang City</item>
+        <item>Rahimyar Khan</item>
+        <item>Gujrat</item>
+        <item>Islamabad</item>
+        <item>Kasur</item>
+        <item>Dera Ghazi Khan</item>
+        <item>Sahiwal</item>
+        <item>Okara</item>
+        <item>Mandi Burewala</item>
+        <item>Saddiqabad</item>
+        <item>Muridke</item>
+        <item>Muzaffargarh</item>
+        <item>Khanpur</item>
+        <item>Gojra</item>
+        <item>Mandi Bahauddin</item>
+        <item>Pakpattan</item>
+        <item>Jaranwala</item>
+        <item>Vihari</item>
+        <item>Kamalia</item>
+        <item>Kot Addu</item>
+        <item>Hasilpur</item>
+        <item>Mianwali</item>
+        <item>Jalalpur Jattan</item>
+        <item>Bhakkar</item>
+        <item>Kharian</item>
+        <item>Pattoki</item>
+        <item>Harunabad</item>
+        <item>Toba Tek Singh</item>
+        <item>Shakargarh</item>
+        <item>Hujra Shah Muqim</item>
+        <item>Kabirwala</item>
+        <item>Lala Musa</item>
+        <item>Nankana Sahib</item>
+        <item>Abdul Hakim</item>
+        <item>Hassan Abdal</item>
+        <item>Kundian</item>
+        <item>Murree</item>
+
+
+    </array>
+
+
+    <array name="KPK">
+        <item>Peshawar</item>
+        <item>Saidu Sharif</item>
+        <item>Mardan</item>
+        <item>Mingaora</item>
+        <item>Kohat</item>
+        <item>Abbottabad</item>
+        <item>Nowshera</item>
+        <item>Swabi</item>
+        <item>Dera Ismail Khan</item>
+        <item>Charsadda</item>
+        <item>Mansehra</item>
+        <item>Bannu</item>
+        <item>Timargara</item>
+        <item>Parachinar</item>
+        <item>Tank</item>
+        <item>Hangu</item>
+        <item>Risalpur Cantonment</item>
+        <item>Karak</item>
+        <item>Chitral</item>
+        <item>Kulachi</item>
+    </array>
+
+
+    <array name="Balochistan">
+        <item>Quetta</item>
+        <item>Khuzdar</item>
+        <item>Chaman</item>
+        <item>Zhob</item>
+        <item>Gwadar</item>
+    </array>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="sizeURL">https://ndapak.org/uniform/wp-content/uploads/2021/03/Screenshot-2021-03-30-144459.png</string>
+
+
+</resources>

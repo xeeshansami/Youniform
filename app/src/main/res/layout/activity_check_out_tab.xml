@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CheckOutTabActivity">
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/state_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_back"
+        app:spb_animateToCurrentProgressState="true"
+        app:spb_checkStateCompleted="true"
+        app:spb_currentStateDescriptionColor="@color/black"
+        app:spb_maxStateNumber="two"
+        app:spb_stateBackgroundColor="#BDBDBD"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_stateForegroundColor="@color/black"
+        app:spb_stateNumberBackgroundColor="#808080"
+        app:spb_stateNumberForegroundColor="#eeeeee"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:id="@+id/sv_billing"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state_progress"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginVertical="@dimen/dp_10"
+            app:cardCornerRadius="@dimen/dp_10"
+            app:cardElevation="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/regularBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Billing Details"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout9"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_billingfName"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/first_name"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout13"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout13"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout13">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_billinglastName"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/last_name"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_billingmail"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout9">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_billingnumber"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/number"
+                        android:inputType="phone"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_billingaddress1"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="House # /Flat No # / Building Name"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/textInputLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+                    <TextView
+                        android:id="@+id/tv_getPin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingVertical="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:text="Get Pin Location"
+                        android:textSize="16sp" />
+                    <!-- <fragment
+
+                         android:id="@+id/autocomplete_fragment"
+                         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                         android:layout_width="match_parent"
+
+                         android:layout_height="match_parent"
+                         android:layout_marginTop="@dimen/dp_10"
+                         android:hint="Street 2"
+                         android:textColorHint="@color/gray"
+
+                         />-->
+                    <ImageView
+                        android:id="@+id/getfromMap"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_mylocation" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:boxBackgroundColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_billingcity"
+                            style="@style/mediumBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="City"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/standard_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        app:boxBackgroundColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                        app:layout_constraintWidth_percent="0.44">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_billingpostalcode"
+                            style="@style/mediumBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Postal Code"
+                            android:inputType="number"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/standard_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:boxBackgroundColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_billingstate"
+                            style="@style/mediumBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="State"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/standard_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        app:boxBackgroundColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                        app:layout_constraintWidth_percent="0.44">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_billingcountry"
+                            style="@style/mediumBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Country"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/standard_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:id="@+id/textInputLayout5"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_marginTop="@dimen/dp_10"
+                           android:layout_marginRight="@dimen/dp_5"
+                           android:layout_weight="1"
+                           android:orientation="vertical"
+                           app:boxBackgroundColor="@color/white"
+                           app:layout_constraintStart_toStartOf="@+id/textInputLayout8"
+                           app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+                           app:layout_constraintWidth_percent="0.44">
+
+                           <Spinner
+                               android:id="@+id/et_billingstate"
+                               style="@style/mediumBlack"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                               android:entries="@array/provinces"
+                               android:hint="Provience"
+                               android:paddingVertical="@dimen/dp_15"
+                               android:textColorHint="@color/gray"
+
+                               android:textSize="16sp" />
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="1dp"
+                               android:background="@color/gray" />
+                       </LinearLayout>
+
+
+                       <LinearLayout
+                           android:id="@+id/textInputLayout7"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_marginLeft="@dimen/dp_5"
+                           android:layout_marginTop="@dimen/dp_10"
+                           android:layout_weight="1"
+                           android:orientation="vertical"
+                           app:boxBackgroundColor="@color/white"
+                           app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                           app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+                           app:layout_constraintWidth_percent="0.44">
+
+                           <Spinner
+                               android:id="@+id/et_billingcountry"
+                               style="@style/mediumBlack"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                               android:entries="@array/country_name"
+                               android:hint="Provience"
+                               android:paddingVertical="@dimen/dp_15"
+                               android:textColorHint="@color/gray"
+                               android:textSize="16sp" />
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="1dp"
+                               android:background="@color/gray" />
+                       </LinearLayout>
+
+                   </LinearLayout>
+                -->
+                <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:id="@+id/textInputLayout8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="@dimen/dp_5"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+                                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                                        app:layout_constraintWidth_percent="0.44">
+
+                                        <Spinner
+                                            android:id="@+id/et_billingcity"
+                                            style="@style/mediumBlack"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                            android:entries="@array/Sindh"
+                                            android:hint="Provience"
+                                            android:padding="@dimen/dp_10"
+                                            android:textColorHint="@color/gray"
+                                            android:textSize="16sp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:layout_alignParentBottom="true"
+                                            android:background="@color/gray" />
+                                    </RelativeLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/dp_5"
+                                        android:layout_weight="1"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                                        app:layout_constraintWidth_percent="0.44">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/et_billingpostalcode"
+                                            style="@style/mediumBlack"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Postal Code"
+                                            android:inputType="number"
+                                            android:textColorHint="@color/gray"
+                                            android:textSize="@dimen/standard_text_size" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/textInputLayout5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:layout_marginRight="@dimen/dp_5"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:layout_constraintStart_toStartOf="@+id/textInputLayout8"
+                                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+                                        app:layout_constraintWidth_percent="0.44">
+
+                                        <Spinner
+                                            android:id="@+id/et_billingstate"
+                                            style="@style/mediumBlack"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                            android:entries="@array/provinces"
+                                            android:hint="Provience"
+                                            android:paddingVertical="@dimen/dp_15"
+                                            android:textColorHint="@color/gray"
+
+                                            android:textSize="16sp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="@color/gray" />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/textInputLayout7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/dp_5"
+                                        android:layout_marginTop="@dimen/dp_10"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+                                        app:layout_constraintWidth_percent="0.44">
+
+                                        <Spinner
+                                            android:id="@+id/et_billingcountry"
+                                            style="@style/mediumBlack"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                            android:entries="@array/country_name"
+                                            android:hint="Provience"
+                                            android:paddingVertical="@dimen/dp_15"
+                                            android:textColorHint="@color/gray"
+                                            android:textSize="16sp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="@color/gray" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_button_height"
+                        android:layout_marginHorizontal="@dimen/dp_5"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gray_rouded_border"
+                        android:text="BACK"
+                        android:visibility="invisible"
+                        app:backgroundTint="@null" />
+
+                    <Button
+                        android:id="@+id/btn_billingsave"
+                        style="@style/mediumWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_button_height"
+                        android:layout_marginHorizontal="@dimen/dp_5"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_rouded_border"
+                        android:text="Next"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+                        app:layout_constraintWidth_percent="0.4" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_shipping"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state_progress">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            app:cardCornerRadius="@dimen/dp_10"
+            app:cardElevation="@dimen/dp_10">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout3"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="10dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/first_name"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout11"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_lastName"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/last_name"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout12"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout11"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout11">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address1"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="House # /Flat No # / Building Name"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/textInputLayout14"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout12"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout12">
+
+                    <TextView
+                        android:id="@+id/et_address24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingVertical="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:text="Get Pin Location"
+                        android:textSize="16sp" />
+                    <!-- <fragment
+
+                         android:id="@+id/autocomplete_fragment"
+                         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                         android:layout_width="match_parent"
+
+                         android:layout_height="match_parent"
+                         android:layout_marginTop="@dimen/dp_10"
+                         android:hint="Street 2"
+                         android:textColorHint="@color/gray"
+
+                         />-->
+                    <ImageView
+                        android:id="@+id/getfromMap2"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_mylocation" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gray" />
+
+                </RelativeLayout>
+
+                <!--
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:id="@+id/textInputLayout14"
+                      android:layout_width="@dimen/zero_dp"
+                      android:layout_height="match_parent"
+                      android:layout_marginTop="5dp"
+                      app:boxBackgroundColor="@color/white"
+                      app:layout_constraintEnd_toEndOf="@+id/textInputLayout12"
+                      app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                      app:layout_constraintTop_toBottomOf="@+id/textInputLayout12">
+
+                      <com.google.android.material.textfield.TextInputEditText
+                          android:id="@+id/et_address24"
+                          style="@style/mediumBlack"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="Street 2"
+                          android:textColorHint="@color/gray"
+                          android:textSize="@dimen/standard_text_size" />
+                  </com.google.android.material.textfield.TextInputLayout>
+  -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout16"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout14"
+                    app:layout_constraintWidth_percent="0.44">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_city"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="City"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_openCityPicker"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="@dimen/zero_dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout16"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout16"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout16"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout16" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout15"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout14"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout14"
+                    app:layout_constraintWidth_percent="0.44">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_postalcode"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Postal Code"
+                        android:inputType="number"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout17"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout16"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout16"
+                    app:layout_constraintWidth_percent="0.44">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_state"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="Provience"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout18"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout15"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout15"
+                    app:layout_constraintWidth_percent="0.44">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_country"
+                        style="@style/mediumBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="Country"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/standard_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout17"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout17">
+
+                    <CheckBox
+                        android:id="@+id/standardDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Standard rate: Rs 200"
+                        app:layout_constraintStart_toStartOf="@+id/cb_billing"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout17"
+
+                        />
+
+                    <CheckBox
+                        android:id="@+id/fastDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="top"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:text="Express Delivery Pay More to get Faster Delivery 2,000"
+                        app:layout_constraintStart_toStartOf="@+id/cb_billing"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout17" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_shippingBack"
+                            style="@style/mediumBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/standard_button_height"
+                            android:layout_marginHorizontal="@dimen/dp_5"
+                            android:layout_weight="1"
+
+                            android:background="@drawable/gray_rouded_border"
+                            android:text="BACK"
+                            app:backgroundTint="@null"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_save"
+                            style="@style/mediumWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/standard_button_height"
+
+                            android:layout_marginHorizontal="@dimen/dp_5"
+                            android:layout_weight="1"
+                            android:background="@drawable/black_rouded_border"
+                            android:text="Place Order"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/textInputLayout18"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout18"
+                            app:layout_constraintWidth_percent="0.45" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView13"
+                    style="@style/regularBlack"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/shipping_address"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/cb_billing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingHorizontal="@dimen/dp_10"
+                    android:text="Same as Billing Address"
+                    app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+
+    <ImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        style="@style/regularBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkout"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ib_back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

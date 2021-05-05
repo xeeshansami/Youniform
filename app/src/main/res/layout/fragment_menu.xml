@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    android:orientation="vertical"
+    tools:context=".Fragment.MenuFragment">
+
+
+    <include layout="@layout/search_header" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.androidkun.xtablayout.XTabLayout
+            android:id="@+id/menu_tabs"
+            app:xTabMode="scrollable"
+            android:layout_width="match_parent"
+            app:xTabTextAllCaps="true"
+            android:layout_height="wrap_content"
+            android:background="@color/offwhite"
+            android:tabStripEnabled="false"
+            app:xTabIndicatorColor="@color/black"
+            app:xTabIndicatorHeight="2dp"
+            app:xTabIndicatorRoundX="2dp"
+            app:xTabIndicatorRoundY="2dp"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/MineCustomTabText" >
+        </com.androidkun.xtablayout.XTabLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/menupager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

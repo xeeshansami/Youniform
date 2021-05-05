@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "366944040122",
+    "project_id": "youniform",
+    "storage_bucket": "youniform.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366944040122:android:05c11145af1a35433ebe83",
+        "android_client_info": {
+          "package_name": "com.youniform.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366944040122-k5f1e9jh2peef1a6bfkkp0e2va254sla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGcAHv9Er05lbicBnpRdxBb6Pq-wMoNhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366944040122-k5f1e9jh2peef1a6bfkkp0e2va254sla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.Map.MapsActivity" />
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/LL"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="?actionBarSize"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:gravity="center">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:fontFamily="@font/poppins_bold"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingHorizontal="@dimen/dp_10"-->
+    <!--            android:text="Select Pin Location"-->
+    <!--            android:textAllCaps="true"-->
+    <!--            android:textColor="@color/white" />-->
+
+    <!--    </LinearLayout>-->
+
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/LL2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/LL"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:visibility="visible">-->
+
+    <!--        <fragment-->
+
+    <!--            android:id="@+id/autocomplete_fragment"-->
+    <!--            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+
+    <!--            android:hint="Street 2"-->
+    <!--            android:textColorHint="@color/gray"-->
+
+    <!--            />-->
+    <!--    </LinearLayout>-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rootsLocations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_marginRight="@dimen/dp_16"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardElevation="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pickupsymbol"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/icon_location" />
+
+                    <View
+                        android:id="@+id/viewp"
+                        android:layout_width="2dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/colorPrimary"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        style="@style/regularBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        style="@style/regularBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/colorGray"
+                        android:textSize="11sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/setlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@color/black"
+        android:fontFamily="@font/poppins_regular"
+
+        android:onClick="onClick"
+        android:text="Set Location"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
+
+
+

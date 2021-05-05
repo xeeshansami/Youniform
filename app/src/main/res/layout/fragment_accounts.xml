@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite">
+
+
+    <ScrollView
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_orderHistory"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/underline"
+                android:drawableLeft="@drawable/icon_history"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Order History"
+                app:layout_constraintEnd_toEndOf="@+id/tv_wishlist"
+                app:layout_constraintStart_toStartOf="@+id/tv_wishlist"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wishlist" />
+
+
+            <TextView
+                android:id="@+id/tv_rateApp"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/underline"
+                android:drawableLeft="@drawable/ic_star"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Rate My Application"
+                app:layout_constraintEnd_toEndOf="@+id/tv_orderHistory"
+                app:layout_constraintStart_toStartOf="@+id/tv_orderHistory"
+                app:layout_constraintTop_toBottomOf="@+id/tv_orderHistory" />
+
+            <TextView
+                android:id="@+id/tv_Name"
+                style="@style/boldBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/space"
+                app:layout_constraintEnd_toEndOf="@+id/space"
+                app:layout_constraintStart_toEndOf="@+id/iv_profile" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_Name"
+                app:layout_constraintStart_toStartOf="@+id/tv_Name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Name" />
+
+            <TextView
+                android:id="@+id/textView34"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_payment"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Cards"
+                app:layout_constraintEnd_toEndOf="@+id/textView33"
+                app:layout_constraintStart_toStartOf="@+id/textView33"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <TextView
+                android:id="@+id/textView35"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_alert"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Notifications"
+                app:layout_constraintEnd_toEndOf="@+id/textView34"
+                app:layout_constraintStart_toStartOf="@+id/textView34"
+                app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/user_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/underline"
+                android:drawableLeft="@drawable/icon_exit"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Log Out"
+                app:layout_constraintEnd_toEndOf="@+id/textView35"
+                app:layout_constraintStart_toStartOf="@+id/textView35"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rateApp" />
+
+            <TextView
+                android:id="@+id/tv_shippingAddress"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/underline"
+                android:drawableLeft="@drawable/icon_location"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Shipping Address"
+                app:layout_constraintEnd_toEndOf="@+id/tv_editProfile"
+                app:layout_constraintStart_toStartOf="@+id/tv_editProfile"
+                app:layout_constraintTop_toBottomOf="@+id/tv_editProfile" />
+
+            <TextView
+                android:id="@+id/tv_editProfile"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/underline"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Edit Profile"
+                app:drawableEndCompat="@drawable/right"
+                app:drawableStartCompat="@drawable/icon_edit_profile"
+                app:layout_constraintEnd_toEndOf="@+id/space"
+                app:layout_constraintStart_toStartOf="@+id/iv_profile"
+                app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+
+            <TextView
+                android:id="@+id/tv_wishlist"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/underline"
+                android:drawableLeft="@drawable/icon_wishlist"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Wishlist"
+                app:layout_constraintEnd_toEndOf="@+id/tv_shippingAddress"
+                app:layout_constraintStart_toStartOf="@+id/tv_shippingAddress"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shippingAddress" />
+
+            <TextView
+                android:id="@+id/textView33"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="0dp"
+                android:drawableLeft="@drawable/icon_order"
+                android:drawableRight="@drawable/right"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_10"
+                android:text="Track Order"
+                app:layout_constraintEnd_toEndOf="@+id/tv_orderHistory"
+                app:layout_constraintStart_toStartOf="@+id/tv_orderHistory"
+                app:layout_constraintTop_toBottomOf="@+id/tv_orderHistory" />
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_profile"
+                app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+
+            <TextView
+                android:id="@+id/textView17"
+                style="@style/regularBlack"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Share Application"
+                app:layout_constraintEnd_toEndOf="@+id/tv_logout"
+                app:layout_constraintStart_toStartOf="@+id/tv_logout"
+                app:layout_constraintTop_toBottomOf="@+id/tv_logout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:layout_constraintWidth_percent="0.22">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="?attr/selectableItemBackgroundBorderless"
+
+                    app:srcCompat="@drawable/facebook" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_whatsapp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/instagram" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_twitter" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
