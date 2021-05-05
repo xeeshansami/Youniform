@@ -18,7 +18,9 @@
 
         <com.androidkun.xtablayout.XTabLayout
             android:id="@+id/menu_tabs"
+            app:xTabTextSize="15sp"
             app:xTabMode="scrollable"
+            app:xTabDisplayNum="3"
             android:layout_width="match_parent"
             app:xTabTextAllCaps="true"
             android:layout_height="wrap_content"

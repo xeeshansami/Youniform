@@ -23,9 +23,10 @@
             android:tabStripEnabled="false"
             app:xTabIndicatorColor="@color/black"
             app:xTabIndicatorHeight="2dp"
-            app:xTabMode="fixed"
+            app:xTabMode="scrollable"
             app:xTabIndicatorRoundX="2dp"
             app:xTabTextSize="15sp"
+            app:xTabDisplayNum="3"
             app:xTabIndicatorRoundY="2dp"
             app:tabSelectedTextColor="@color/black"
             app:tabTextAppearance="@style/MineCustomTabText" />

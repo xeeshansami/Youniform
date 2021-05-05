@@ -73,8 +73,8 @@ public class HomeFragment extends Fragment {
 
                         //  adapter.addFragment(new SubCategoryFragment(c.getId(), c.getName()), c.getName());
                         adapter.addFragment(new SubCategoryFragment(response.body().get(1).getId(), response.body().get(1).getName(), 0), response.body().get(1).getName());
-                        adapter.addFragment(new SubCategoryFragment(response.body().get(2).getId(), response.body().get(2).getName(), 1), response.body().get(2).getName());
-                        adapter.addFragment(new SubCategoryFragment(response.body().get(0).getId(), response.body().get(0).getName(), 2), response.body().get(0).getName());
+                        adapter.addFragment(new SubCategoryFragment(response.body().get(2).getId(), response.body().get(2).getName(), 1), "   "+response.body().get(2).getName());
+                        adapter.addFragment(new SubCategoryFragment(response.body().get(0).getId(), response.body().get(0).getName(), 2), "   "+response.body().get(0).getName());
 
                         //}
                         viewpage.setAdapter(adapter);

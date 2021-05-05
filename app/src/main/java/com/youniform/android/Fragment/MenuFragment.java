@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.androidkun.xtablayout.DividerDrawable;
 import com.androidkun.xtablayout.XTabLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.youniform.android.Activities.CartActivity;
@@ -77,8 +78,8 @@ public class MenuFragment extends Fragment {
                         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
 
                         adapter.addFragment(new MenuSubFragment(response.body().get(1).getId(), response.body().get(1).getName(), response.body().get(1).getHassubcat()), response.body().get(1).getName());
-                        adapter.addFragment(new MenuSubFragment(response.body().get(2).getId(), response.body().get(2).getName(), response.body().get(2).getHassubcat()), response.body().get(2).getName());
-                        adapter.addFragment(new MenuSubFragment(response.body().get(0).getId(), response.body().get(0).getName(), response.body().get(0).getHassubcat()), response.body().get(0).getName());
+                        adapter.addFragment(new MenuSubFragment(response.body().get(2).getId(), response.body().get(2).getName(), response.body().get(2).getHassubcat()), "   "+response.body().get(2).getName());
+                        adapter.addFragment(new MenuSubFragment(response.body().get(0).getId(), response.body().get(0).getName(), response.body().get(0).getHassubcat()), "   "+response.body().get(0).getName());
 
 
                   /*       for (CategoriesModel c: response.body()){
@@ -91,6 +92,7 @@ public class MenuFragment extends Fragment {
                                 //    for (int i = 0; i < response.body().size(); i++) {
                                 // if (response.body().get(i).getId().equals(Utils.CAT_ID)) {
                                 tabLayout.setScrollPosition(tab, 0f, true);
+                                tabLayout.setDividerGravity(DividerDrawable.CENTER);
                                 viewpage.setCurrentItem(tab);
                                 Utils.CAT_ID = 0;
                                 //      }
